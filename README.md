@@ -37,6 +37,10 @@ A specific queue data structure for processing cells in board after a specific o
 ### Vector2 : 
 Representation of 2D vectors and points.
 
+## Get
+```
+git clone https://github.com/jessehao/2048_GameModel_cpp_cmake.git
+```
 
 ## Build
 before build this project, you need [CMake](https://cmake.org/) first.
