@@ -7,10 +7,17 @@ int ProcessingQueue::enqueue(int data) {
 	int result = 0;
 	if (isFull() || data == 0) return result;
 	if (body[rearIndex] == 0 || body[rearIndex] == data){
+		bool flag = false;
 		if (body[rearIndex] == 0)
 			size += 1;
+		else
+			flag = true;
 		result = body[rearIndex] * 2;
 		body[rearIndex] += data;
+		if(flag){
+			rearIndex = (rearIndex + 1) % maxSize;
+			body[rearIndex] = 0;
+		}
 	} else {
 		rearIndex = (rearIndex + 1) % maxSize;
 		body[rearIndex] = data;
